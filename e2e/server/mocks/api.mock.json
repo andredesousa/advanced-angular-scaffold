@@ -1,0 +1,20 @@
+{
+  "name": "Users Endpoint",
+  "request": {
+    "url": "v1/users",
+    "method": "GET"
+  },
+  "responses": {
+    "ok": {
+      "default": true,
+      "status": 200,
+      "headers": {
+        "Content-type": "application/json"
+      },
+      "file": "../data/users-response.json"
+    },
+    "error": {
+      "status": 500
+    }
+  }
+}

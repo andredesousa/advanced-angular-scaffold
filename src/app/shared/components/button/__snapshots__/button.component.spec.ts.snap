@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ButtonComponent should match with the snapshot 1`] = `
+<app-button
+  __ngContext__={[Function LRootView]}
+  clicked={[Function EventEmitter_]}
+  label={[Function String]}
+  primary="false"
+  size={[Function String]}
+>
+  <button
+    type="button"
+  >
+    
+  </button>
+</app-button>
+`;

@@ -1,0 +1,4 @@
+{
+  "*.{js,html,scss}": ["prettier --write --loglevel silent", "git add"],
+  "*.ts": ["tslint --fix --force", "git add"]
+}

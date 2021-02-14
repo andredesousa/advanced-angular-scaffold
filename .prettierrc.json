@@ -1,0 +1,15 @@
+{
+  "arrowParens": "avoid",
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": {
+        "printWidth": 120
+      }
+    }
+  ],
+  "printWidth": 80,
+  "singleQuote": true,
+  "trailingComma": "all"
+}

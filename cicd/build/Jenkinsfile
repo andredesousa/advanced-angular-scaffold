@@ -1,0 +1,59 @@
+pipeline {
+  agent {
+    docker 'circleci/node:12-stretch-browsers'
+  }
+  stages {
+    stage('Checkout & Build') {
+      steps {
+        checkout([
+          $class: 'GitSCM',
+          branches: [[
+            name: '*/master'
+          ]],
+          doGenerateSubmoduleConfigurations: false,
+          userRemoteConfigs: [[
+            credentialsId: '',
+            url: ''
+          ]]
+        ])
+        sh 'npm ci --no-cache'
+      }
+    }
+    stage('Lint') {
+      steps {
+        sh 'npm run lint'
+      }
+    }
+    stage('Unit Tests') {
+      steps {
+        sh 'npm run test'
+      }
+    }
+    stage('E2E Tests') {
+      steps {
+        sh 'npm run e2e'
+      }
+    }
+  }
+  post {
+    always {
+      publishHTML([
+        allowMissing: false,
+        alwaysLinkToLastBuild: false,
+        keepAll: false,
+        reportDir: 'dist/coverage/lcov-report/',
+        reportFiles: 'index.html',
+        reportName: 'Unit Tests Report'
+      ])
+      publishHTML([
+        allowMissing: false,
+        alwaysLinkToLastBuild: false,
+        keepAll: false,
+        reportDir: 'dist/e2e/',
+        reportFiles: 'index.html',
+        reportName: 'E2E Tests Report'
+      ])
+      cleanWs()
+    }
+  }
+}

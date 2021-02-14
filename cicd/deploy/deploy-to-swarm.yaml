@@ -1,0 +1,18 @@
+---
+- name: Deploy Angular 11
+  hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Deploy to Docker Swarm
+      docker_stack:
+        name: "angular11"
+        state: present
+        compose:
+          - version: "3.7"
+            services:
+              angular11:
+                image: angular11:latest
+                ports:
+                  - "5000:8080"
+        resolve_image: always
