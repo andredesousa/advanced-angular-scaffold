@@ -1,9 +1,0 @@
-* text eof=lf
-
-# Do not change line endings
-*.png binary
-*.woff binary
-*.woff2 binary
-*.eot binary
-*.ttf binary
-*.cert binary
