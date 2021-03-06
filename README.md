@@ -1,4 +1,4 @@
-# 🚀 Advanced Angular 11 Scaffold
+# 🚀 Advanced Angular Scaffold
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11 and [Node.js](https://nodejs.org/en/about/releases) version 12.
 It provides a baseline code base to help you kick start an Angular project.
