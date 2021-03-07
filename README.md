@@ -136,8 +136,8 @@ The `styles.scss` file imports all the partials to apply their styling.
 ## Available npm scripts
 
 The scripts in [package.json](package.json) file were built with simplicity in mind to automate as much repetitive tasks as possible and help developers focus on what really matters.
-There are scripts to start the application in development mode, code linting, to run unit tests via [Jest](https://jestjs.io/), to run functional and visual tests via [Protractor](http://www.protractortest.org/) and [Cucumber](https://cucumber.io/), to build, release and deploy the application to [Docker Swarm](https://docs.docker.com/engine/swarm/).
-It includes scripts to generate the API models and project documentation, serve and deploy [Storybook](https://storybook.js.org/), code analysis via [SonarQube](https://www.sonarqube.org/), npm audit, changelog and [Lighthouse](https://github.com/GoogleChrome/lighthouse).
+There are scripts to start the application, code linting and formatting, to run unit tests via [Jest](https://jestjs.io/), to run functional and visual tests via [Protractor](http://www.protractortest.org/) and [Cucumber](https://cucumber.io/), to build, release and deploy the application to [Docker Swarm](https://docs.docker.com/engine/swarm/).
+It includes scripts to generate the API models and project documentation, serve and deploy [Storybook](https://storybook.js.org/), code analysis via [SonarQube](https://www.sonarqube.org/), changelog, npm audit and [Lighthouse](https://github.com/GoogleChrome/lighthouse).
 All the commands should be executed in a console inside the root directory.
 
 ## Code scaffolding
