@@ -2,11 +2,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11 and [Node.js](https://nodejs.org/en/about/releases) version 12.
 It provides a baseline code base to help you kick start an Angular project.
-This project has a complete development environment set up, including build, test, deploy, routing, simple components, service, and directives as examples and templates.
+It has a complete development environment configured, including build, test and deploy scripts, routing, simple components, services, and directives as examples.
 
 ## Table of Contents
 
-- [Project Structure](#project-structure)
+- [Project structure](#project-structure)
 - [Available npm scripts](#available-npm-scripts)
 - [Code scaffolding](#code-scaffolding)
 - [Development server](#development-server)
@@ -22,13 +22,13 @@ This project has a complete development environment set up, including build, tes
 - [Build and deployment](#build-and-deployment)
 - [Further help](#further-help)
 
-## Project Structure
+## Project structure
 
 When working in a large team with many developers that are responsible for the same codebase, having a common understanding of how the application should be structured is vital.
-The time spent arguing over architectural decisions takes up a large portion of our day to day operations, and having a common understanding comes a long way in solving them.
-Based on best practices from the community, [Angular coding style guide](https://angular.io/guide/styleguide), other github Angular projects, developer experience, your project should look like this:
+The time spent arguing over architectural decisions takes up a large portion of your day to day operations, and having a common understanding comes a long way in solving them.
+Based on best practices from the community, [Angular coding style guide](https://angular.io/guide/styleguide), other github Angular projects and developer experience, your project should look like this:
 
-```bash
+```html
 ├── e2e
 |  ├── server
 |  ├── src
@@ -117,17 +117,17 @@ Based on best practices from the community, [Angular coding style guide](https:/
 ```
 
 The workspace root folder contains various support and configuration files, and a README file with generated descriptive text that you can customize.
-All of the app’s code goes in a folder named `src`. The end-to-end tests are in the `e2e` folder.
+All of the app's code goes in a folder named `src`. The end-to-end tests are in the `e2e` folder.
 
 In Angular, everything is organized in modules, and every application have at least one of them, the `app` root module. The `app` module is the entry point of the application, and is the module that Angular uses to bootstrap the application.
 The `core` module takes on the role of the `app` root module, but is not the module that gets bootstrapped by Angular at run-time.
-The common denominator between the files present here is that we only need to load them once, and that is at run-time, which makes them singleton.
+The common denominator between the files present here is that you only need to load them once, and that is at run-time, which makes them singleton.
 The `features` folder contains all different feature modules.
 These modules are independent of each other.
 This allows Angular to load only the module it requires to display the request thereby saving bandwidth and speeding the entire application.
-Which means the module isn’t loaded before the user actually accesses the route.
-Do declare components, directives, and pipes in the `shared` module when those items will be re-used and referenced by the components declared in other feature modules.
-The `shared` module shouldn’t have any dependency to the rest of the application.
+Which means the module isn't loaded before the user actually accesses the route.
+Do declare components, directives and pipes in the `shared` module when those items will be re-used and referenced by the components declared in other feature modules.
+The `shared` module shouldn't have any dependency to the rest of the application.
 
 The global styles for the project are placed in a `scss` folder under `assets`.
 These files can be imported by other scss files.
@@ -161,7 +161,7 @@ You can change `ng-apimock` configuration opening [server.js](e2e/server/server.
 
 ## Developing components in isolation
 
-Angular CLI doesn’t include any tools for this by default.
+Angular CLI doesn't include any tools for this by default.
 This project contains [Storybook](https://storybook.js.org/) for Angular.
 Use Storybook to build small atomic components and complex pages in your web application.
 In the `shared` module, you can find examples of UI components and stories.
@@ -192,7 +192,7 @@ Your translations should be stored in a JSON file. This file looks like this:
 ## State management
 
 The state can be local to a component or shared between components.
-If the state is used by other components, it’s global, otherwise it will be local UI state.
+If the state is used by other components, it's global, otherwise it will be local UI state.
 Sharing data between different components (especially with many separated ones) can be really difficult.
 [NgRx](https://ngrx.io/) is a state management system that is based on the [Redux](https://redux.js.org/) pattern.
 NgRx is mainly for managing global state across an entire application.
@@ -219,14 +219,14 @@ In this approach, files are grouped according to features, that is, a dashboard,
 
 ## Linting and formatting code
 
-[TSLint](https://palantir.github.io/tslint/), [Prettier](https://prettier.io/) and [stylelint](https://stylelint.io/) help us maintain code quality.
+[TSLint](https://palantir.github.io/tslint/), [Prettier](https://prettier.io/) and [stylelint](https://stylelint.io/) help maintain the code quality.
 Linters are also excellent tools for finding certain classes of bugs, such as those related to variable scope.
 The formatting of the code is ensured by Prettier.
 
-It’s recommended to use them in our projects because:
+It's recommended to use them in your projects because:
 
 - They keep everybody on the same page, following the same rules.
-- They save time in code reviews, because we can safely ignore all style issues, and focus on things that matter, like the structure and semantics of our code.
+- They save time in code reviews, because you can safely ignore all style issues, and focus on things that matter, like the structure and semantics of your code.
 - They catch errors. Prettier, not so much, but TSLint catches a lot of syntax errors and simple forms of type errors, such as undefined variables.
 - Setting these things up is a one-time cost, but the time-saving benefits compound over time.
 
@@ -235,8 +235,8 @@ Many problems can be automatically fixed with `npm run lint:fix`.
 
 These checks are complement with [Gherkin lint](https://www.npmjs.com/package/gherkin-lint), [SonarQube](https://www.sonarqube.org/) and other tools.
 
-Depending on our editor, you may want to add an editor extension to lint and format our code while we type or on-save.
-To ensure all files committed to git don’t have any TypeScript, linting, or formatting errors, there is a tool called [lint-staged](https://www.npmjs.com/package/lint-staged) that can be used.
+Depending on your editor, you may want to add an editor extension to lint and format your code while you type or on-save.
+To ensure all files committed to git don't have any TypeScript, linting, or formatting errors, there is a tool called [lint-staged](https://www.npmjs.com/package/lint-staged) that can be used.
 When lint-staged is used in combination with [husky](https://www.npmjs.com/package/husky), the linting commands specified with lint-staged can be executed to staged files on pre-commit.
 
 ## Running unit tests
@@ -270,12 +270,11 @@ You can exclude features ou scenarios with the `~@ignore` tag or run specific fe
 ## Debugging
 
 You can debug the client-side Angular code, adding breakpoints, inspect variables and see the call stack of the client-side Angular application.
-These functionalities are provided natively or based on plugins.
 Another tool is [Angular Augury](https://augury.rangle.io/), made by Rangle.io.
 `Augury` is an extension for debugging and profiling Angular applications inside the Google Chrome and Mozilla Firefox browsers.
-You can use our IDE for debugging unit and end-to-end tests.
+You can use your IDE for debugging unit and end-to-end tests.
 These functionalities are provided natively or based on plugins.
-You can [debug](https://www.protractortest.org/#/debugging) async/await tests in chrome inspector with `debugger` keyword if we run `npm run protractor:debug`.
+You can [debug](https://www.protractortest.org/#/debugging) async/await tests in chrome inspector with `debugger` keyword if you run `npm run protractor:debug`.
 When you are using the debug scripts, you need to open the `chrome://inspect` page.
 The same is valid when you run `npm run test:debug` script.
 
@@ -294,7 +293,7 @@ You can see the bundle statistics running the analyzer with the `npm run analyze
 
 ## Commit messages convention
 
-In order to have a consistent git history every commit must follow a specific template. Here’s the template:
+In order to have a consistent git history every commit must follow a specific template. Here's the template:
 
 ```bash
 <type>(<ITEM ID>?): <subject>
@@ -305,7 +304,7 @@ In order to have a consistent git history every commit must follow a specific te
 Must be one of the following:
 
 - **build**: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-- **ci**: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, Jenkins, SauceLabs)
+- **ci**: Changes to your CI configuration files and scripts (example scopes: Travis, Circle, Jenkins, SauceLabs)
 - **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
 - **docs**: Documentation only changes
 - **feat**: A new feature
@@ -320,7 +319,7 @@ Must be one of the following:
 
 The related **issue** or **user story** or even **defect**.
 
-- For **user stories**, you shoud use `US-` as prefix. Example: `feat(US-4321): ...`
+- For **user stories**, you should use `US-` as prefix. Example: `feat(US-4321): ...`
 - For **no related issues** or **defects** you should leave it blank. Example: `feat: ...`
 
 ### Subject
